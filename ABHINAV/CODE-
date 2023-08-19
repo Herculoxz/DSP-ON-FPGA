@@ -1,0 +1,80 @@
+Q1)SIMPLE WIRE
+module top_module(input in, output out);
+   assign out = in;
+endmodule
+Q2)FOUR WIRE
+module top_module( 
+    input a,b,c,
+    output w,x,y,z );
+    
+    assign w = a;
+    assign x=b;
+    assign y=b;
+    assign z= c;
+
+endmodule
+Q3) INVERTER
+module top_module( input in, output out );
+assign out = !in;
+endmodule
+Q4)AND GATE
+module top_module( 
+    input a, 
+    input b, 
+    output out );
+    
+    assign out = a && b;
+endmodule
+Q5)NOR GATE
+module top_module( 
+    input a, 
+    input b, 
+    output out );
+    assign out = ~a & ~b;
+endmodule
+Q6)XNOR GATE
+module top_module( 
+    input a, 
+    input b, 
+    output out );
+    assign out = ~(a^b);
+endmodule
+Q7)DECLARING WIRES
+`default_nettype none
+module top_module(
+    input a,
+    input b,
+    input c,
+    input d,
+    output out,
+    output out_n   ); 
+    wire wire1;
+    wire wire2;
+    wire wire3;
+    assign wire1 = a&&b;
+    assign wire2 = c&&d;
+    assign wire3 = wire1 | wire2 ;
+    assign out = wire3;
+    assign out_n = ~wire3;
+endmodule
+Q8)7458 CHIP
+module top_module ( 
+    input p1a, p1b, p1c, p1d, p1e, p1f,
+    output p1y,
+    input p2a, p2b, p2c, p2d,
+    output p2y );
+    wire wire1;
+    wire wire2;
+    wire wire3;
+    wire wire4;
+    assign wire1 = p2a && p2b;
+    assign wire2 = p2c &&p2d;
+    assign p2y = wire1 | wire2;
+    assign wire3 = p1a && p1b && p1c;
+    assign wire4 = p1d && p1e && p1f;
+    assign p1y = wire3 | wire4;
+endmodule
+
+
+
+

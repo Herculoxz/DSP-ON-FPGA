@@ -36,7 +36,7 @@ Canny edge detection is a widely used image processing technique for detecting e
 - Double thresholding 
 - non-maximum suppression.
 
-![[Pasted image 20231104124654.png]]
+
 
 ## TECH STACK 
 ---
